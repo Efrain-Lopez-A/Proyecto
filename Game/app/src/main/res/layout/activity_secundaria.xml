@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CB7116"
     android:orientation="vertical"
     tools:context=".Secundaria">
 
@@ -12,7 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:text="Nombre:"
+        android:fontFamily="casual"
+        android:labelFor="@id/edtNombre"
+        android:text="@string/nombre_es"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp" />
 
@@ -28,7 +31,8 @@
         android:id="@+id/txtGenero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Genero:"
+        android:text="@string/genre_es"
+        android:fontFamily="casual"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp" />
 
@@ -39,18 +43,20 @@
 
         <ImageButton
             android:id="@+id/IbtnHombre"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:onClick="OnClickHombre"
             android:layout_weight="1"
+            android:background="@drawable/genre_button"
+            android:onClick="OnClickHombre"
             app:srcCompat="@drawable/hombre" />
 
         <ImageButton
             android:id="@+id/IbtnMujer"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:onClick="OnClickMujer"
             android:layout_weight="1"
+            android:background="@drawable/genre_button"
+            android:onClick="OnClickMujer"
             app:srcCompat="@drawable/mujer" />
     </LinearLayout>
 
@@ -63,8 +69,13 @@
             android:id="@+id/btnDatos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/main_button"
             android:onClick="OnClickDatos"
-            android:text="ok" />
+            android:text="@string/acept_es"
+            android:fontFamily="casual"
+            android:textColor="@android:color/white"
+            android:textSize="26sp" />
     </LinearLayout>
 
 </LinearLayout>

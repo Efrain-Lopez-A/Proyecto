@@ -27,7 +27,7 @@ public class ListaAdapter extends ArrayAdapter<Saves> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         ImageView imgVw;
-        TextView txtNombreLista, txtNivel;
+        TextView txtNombreLista, txtNivel, txtNumPartida;
 
         View vFila = convertView;
         if(vFila == null){
@@ -37,11 +37,13 @@ public class ListaAdapter extends ArrayAdapter<Saves> {
         imgVw = vFila.findViewById(R.id.imgViewSave);
         txtNombreLista = vFila.findViewById(R.id.txtNombreLista);
         txtNivel = vFila.findViewById(R.id.txtNivel1);
+        txtNumPartida = vFila.findViewById(R.id.txtNumPartida);
 
         Saves sActual = saves[position];
         imgVw.setImageResource(sActual.imagen);
+        txtNumPartida.setText("Partida #" + (position + 1));
         txtNombreLista.setText(sActual.nombre);
-        txtNivel.setText(sActual.nivel+"");
+        txtNivel.setText("Nivel: " + sActual.nivel);
         return vFila;
 
 
